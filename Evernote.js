@@ -5,10 +5,10 @@ Class NotesApplication { // The class itself
   * it has a notes list/array to store all the notes as an instance property
   */ 
  
- constructor authorTaker(author){
-	this.authorCaptured = author
-	notes = []
-	}
+	 constructor(author){
+		this.authorCaptured = author
+		var notes = []
+		}
 	
 	/**
 	 * Take the note content as the parameter and 
@@ -27,7 +27,11 @@ Class NotesApplication { // The class itself
 	 */
 	
 	listNotes(){
-		// How to do that, coming up.
+
+		for (i = 0; i < notes.length; i++){
+			return ([["ID:", i], 
+				notes[i]]);
+		}
 	}
 	/**
 	*note_id is the index of the note in the notes list
