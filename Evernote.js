@@ -5,7 +5,7 @@ Class NotesApplication {
 	  * this constructor saves the author parameter as an instance variable
 	  * it has a notes list/array to store all the notes as an instance property
 	  */ 
-	 constructor(author){
+	constructor(author){
 		this.authorCaptured = author
 		this.notes = []
 		}
@@ -14,7 +14,7 @@ Class NotesApplication {
 	 * Take the note content as the parameter and 
 	 * add it to the notes list object
 	 */
-	function create(note_content){
+	create(note_content){
 		notes.push(note_content)
 		return notes
 	}
@@ -39,7 +39,7 @@ Class NotesApplication {
 	 * note_id is the index of the note in the notes list
 	 * return the content of that note as a string
 	 */
-	function capture(note_id){
+	capture(note_id){
 		
 		return String(notes[note_id]);
 	}
@@ -51,7 +51,7 @@ Class NotesApplication {
 	 * [NOTE_CONTENT]
 	 * By Author[author]
 	 */
-	function search(search_text){
+	search(search_text){
 		for (x = 0; x < search_text.length; x++);
 		
 			for (i = 0; i < notes.length; i++){
@@ -65,11 +65,11 @@ Class NotesApplication {
 	/**
 	 * delete the note
 	 */
-	function killer(note_id){
-	for (i = 0; i < notes.length; i++) { 
-		delete notes[i];
-		return (notes);
-		}
+	killer(note_id){
+		for (i = 0; i < notes.length; i++) { 
+			delete notes[i];
+			return (notes);
+			}
 }
 	/**
 	 *  replace content in note at note_id with new_note
