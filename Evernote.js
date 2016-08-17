@@ -6,8 +6,8 @@ Class NotesApplication {
 	  * it has a notes list/array to store all the notes as an instance property
 	  */ 
 	constructor(author){
-		this.authorCaptured = author
-		this.notes = []
+		this.authorCaptured = author;
+		this.notes = [];
 		}
 	
 	/**
@@ -15,8 +15,8 @@ Class NotesApplication {
 	 * add it to the notes list object
 	 */
 	create(note_content){
-		notes.push(note_content)
-		return notes
+		notes.push(note_content);
+		return notes;
 	}
 	
 	/**
@@ -30,8 +30,8 @@ Class NotesApplication {
 
 		for (i = 0; i < notes.length; i++){
 			return ([["ID:", i], 
-				notes[i]])
-				"By Author " authorCaptured;
+				notes[i]]
+				"By Author " authorCaptured);
 		}
 	}
 	
@@ -75,5 +75,7 @@ Class NotesApplication {
 	 *  replace content in note at note_id with new_note
 	 */
 	function edit(note_id, new_content) {
+		
+		notes[note_id]
 	}
  }
