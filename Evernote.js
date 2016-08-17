@@ -67,7 +67,7 @@ class NotesApplication {
 	/**
 	 * delete the note
 	 */
-	killer(note_id){
+	remover(note_id){
 		for (let i = 0; i < this.notes.length; i++) { 
 			delete this.notes[i];
 			return (this.notes);
