@@ -1,4 +1,5 @@
-Class NotesApplication {
+
+class NotesApplication {
 	 
 	 /**
 	  * constructor that takes author as a parameter
@@ -15,8 +16,8 @@ Class NotesApplication {
 	 * add it to the notes list object
 	 */
 	create(note_content){
-		notes.push(note_content);
-		return notes;
+		this.notes.push(note_content);
+		return this.notes;
 	}
 	
 	/**
@@ -28,10 +29,8 @@ Class NotesApplication {
 	 */
 	listNotes(){
 
-		for (i = 0; i < notes.length; i++){
-			return ([["ID:", i], 
-				notes[i]]
-				"By Author " authorCaptured);
+		for (let i = 0; i < this.notes.length; i++){
+			return ("ID:", i , this.notes[i], this.authorCaptured);
 		}
 	}
 	
@@ -39,23 +38,24 @@ Class NotesApplication {
 	 * note_id is the index of the note in the notes list
 	 * return the content of that note as a string
 	 */
-	capture(note_id){
+	getNote(note_id){
 		
-		return String(notes[note_id]);
+		return String(this.notes[note_id]);
 	}
 		
 	/**
-	 * take search_text
-	 * result for serch-text
-	 * Note id: [note_id]
+	 * This function take a search string, search_text
+	 * It returns all the notes with that text within it in the following format:
+	 * Showing results for search ‘[<search_text>]’
+	 * Note ID: [note_id]
 	 * [NOTE_CONTENT]
-	 * By Author[author]
+	 * By Author [author]
 	 */
 	search(search_text){
 		for (x = 0; x < search_text.length; x++);
 		
-			for (i = 0; i < notes.length; i++){
-				if (search_text[x] === notes[i]){
+			for (i = 0; i < this.notes.length; i++){
+				if (search_text[x] === this.notes[i]){
 							
 						return "Yay!";
 			}
@@ -74,8 +74,13 @@ Class NotesApplication {
 	/**
 	 *  replace content in note at note_id with new_note
 	 */
-	function edit(note_id, new_content) {
+	modifyNote(note_id, new_content) {
 		
-		notes[note_id]
+		notes[note_id];
 	}
  }
+ 
+ let n = new NotesApplication("Femi");
+ n.create("Lorem");
+ 
+ n.listNotes()

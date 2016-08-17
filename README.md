@@ -13,7 +13,8 @@
 
 * Create a notes list/array to store all the notes as an instance property.
 
-* Create the following functionality for the NotesApplication class
+### Create the following functionality for the NotesApplication class
+
 * create(note_content) - This function takes the note content as the parameter and adds it to the notes list of the object.
 
 * listNotes() - This function lists out each of the notes in the notes list in the following format. 
