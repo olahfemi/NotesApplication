@@ -1,0 +1,20 @@
+Class NotesApplication { // The class itself
+ // constructor that takes author as a parameter
+ // this constructor saves the author parameter as an instance variable
+ // it has a notes list/array to store all the notes as an instance property
+ 
+ constructor authorTaker(author){
+	instanceVariable = author
+	notes = []
+	}
+	//Take the note content as the parameter and ass it to the notes list object
+	function create(note_content){
+		notes.push(note_content)
+		return notes
+	}
+	/**the content of the notes list this way:
+	
+	listNotes(){
+		
+	}
+ }
