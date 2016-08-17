@@ -13,8 +13,34 @@ Class NotesApplication { // The class itself
 		return notes
 	}
 	/**the content of the notes list this way:
+	*Note ID:[note_id]
+	*[NOTE_CONTENT]
+	*
+	*By Author[author]
+	*/
 	
 	listNotes(){
-		
+		// How to do that, coming up.
+	}
+	
+	function get(note_id){
+		//note_id is the index of the note in the notes list
+		//return the content of that note as a string
+	}
+	
+	function search(search_text) {
+		//take search_text
+		//result for serch-text
+		//Note id: [note_id]
+		//[NOTE_CONTENT]
+		//By Author[author]
+	}
+
+	function delete(note_id){
+		// delete the note
+	}
+
+	function edit(note_id, new_content) {
+		// replace content in note at note_id with new_note
 	}
  }
