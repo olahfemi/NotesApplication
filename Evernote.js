@@ -7,7 +7,7 @@ Class NotesApplication { // The class itself
  
 	 constructor(author){
 		this.authorCaptured = author
-		var notes = []
+		this.notes = []
 		}
 	
 	/**
@@ -30,7 +30,8 @@ Class NotesApplication { // The class itself
 
 		for (i = 0; i < notes.length; i++){
 			return ([["ID:", i], 
-				notes[i]]);
+				notes[i]])
+				"By Author " authorCaptured;
 		}
 	}
 	/**
@@ -39,6 +40,7 @@ Class NotesApplication { // The class itself
 	*/
 	function get(note_id){
 		
+		return String(notes[note_id]);
 	}
 		
 	
@@ -49,8 +51,15 @@ Class NotesApplication { // The class itself
 	 * [NOTE_CONTENT]
 	 * By Author[author]
 	 */
-	function search(search_text) {
+	function search(search_text){
+		for (x = 0; x < search_text.length; x++);
 		
+			for (i = 0; i < notes.length; i++){
+				if (search_text[x] === notes[i]){
+							
+						return "Yay!";
+			}
+		}
 	}
 	
 	/**
