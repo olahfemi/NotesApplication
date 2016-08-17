@@ -24,14 +24,14 @@
 * getNote(note_id) - This function takes a note_id which refers to the index of the note in the notes list and returns the content of that note as a string.
 * search(search_text) - This function take a search string, search_text and returns all the notes with that text within it in the following format:
 
-	'''
+	```
 	   Showing results for search ‘[<search_text>]’
 
 	   Note ID: [note_id]
 	   NOTE_CONTENT]
 
 	   By Author [author]
-	'''					 
+	```					 
 						 
 * remover(note_id) - This function deletes the note at the index note_id of the notes list.
 * modifyNote(note_id, new_content) - This function replaces the content in the note at note_id with new_content.
