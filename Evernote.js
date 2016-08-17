@@ -1,10 +1,10 @@
-Class NotesApplication { // The class itself
- /**
-  * constructor that takes author as a parameter
-  * this constructor saves the author parameter as an instance variable
-  * it has a notes list/array to store all the notes as an instance property
-  */ 
- 
+Class NotesApplication {
+	 
+	 /**
+	  * constructor that takes author as a parameter
+	  * this constructor saves the author parameter as an instance variable
+	  * it has a notes list/array to store all the notes as an instance property
+	  */ 
 	 constructor(author){
 		this.authorCaptured = author
 		this.notes = []
@@ -18,6 +18,7 @@ Class NotesApplication { // The class itself
 		notes.push(note_content)
 		return notes
 	}
+	
 	/**
 	 * the content of the notes list this way:
 	 * Note ID:[note_id]
@@ -25,7 +26,6 @@ Class NotesApplication { // The class itself
 	 *
 	 * By Author[author]
 	 */
-	
 	listNotes(){
 
 		for (i = 0; i < notes.length; i++){
@@ -34,16 +34,16 @@ Class NotesApplication { // The class itself
 				"By Author " authorCaptured;
 		}
 	}
+	
 	/**
-	*note_id is the index of the note in the notes list
-	*return the content of that note as a string
-	*/
-	function get(note_id){
+	 * note_id is the index of the note in the notes list
+	 * return the content of that note as a string
+	 */
+	function capture(note_id){
 		
 		return String(notes[note_id]);
 	}
 		
-	
 	/**
 	 * take search_text
 	 * result for serch-text
@@ -63,11 +63,14 @@ Class NotesApplication { // The class itself
 	}
 	
 	/**
-	*delete the note
-	*/
-	function delete(note_id){
-		
-	}
+	 * delete the note
+	 */
+	function killer(note_id){
+	for (i = 0; i < notes.length; i++) { 
+		delete notes[i];
+		return (notes);
+		}
+}
 	/**
 	 *  replace content in note at note_id with new_note
 	 */
